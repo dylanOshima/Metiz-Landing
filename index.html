@@ -10,91 +10,71 @@
 
 			gtag('config', 'UA-152756379-1');
 		</script>
+		<!-- Google Analytics -->
 		<title>Metiz</title>
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1" />
-		<link rel="stylesheet" href="assets/css/main.css" />
+		<link rel="stylesheet" href="./assets/css/main.css" />
 	</head>
 	<body>
-
-		<!-- Header -->
-			<header id="header" class="alt">
-				<div class="inner">
-					<!-- <div id="logo"><img src='./images/logo.jpg' alt="Metis Logo"></div> -->
-					<h1>Metiz</h1>
-					<p>Tagline and introduction.</p>
-				</div>
-			</header>
-
-			<!-- Menu -->
-				<section class="main">
-					<div class="column">
-						<img src="images/pic00.jpg" alt="Cooking" />
-					</div>
-					<div class="column text">
-						<h2>Menu</h2>
-						<div class="menu-item"></div>
-						<div class="menu-item">Item 2</div>
-						<div class="menu-item">Item 3</div>
-					</div>
-				</section>
-
-				<div class="row row-right text">
-					<h2>The Concept</h2>
-					<p>Phasellus ac augue ac magna auctor tempus proin<br />
-						accumsan lacus a nibh commodo in pellentesque dui<br />
-						in hac habitasse platea dictumst.</p>
-				</div>
-				
-				<div class="row row-left">
-					<img src="images/pic01.jpg" alt="restaurant" />
-				</div>
-				<div class="row row-right">
-						<img src="images/pic04.jpg" alt="texture" />
-				</div>
-
-				<!-- CTA -->
-					<section id="cta" class="special">
-						<h2>Book Online</h2>
-						<p>We are open from Tuesday to Saturday, with seatings at 7:30PM and 8:30PM. <br />
-							We are currently in a soft opening and
-							have limited seating.
-						</p>
-						<ul class="actions">
-							<li><a href="#" class="button big">Get Started</a></li>
-						</ul>
-					</section>
-
-				<!-- Main -->
-				<!--
-					<section id="main" class="main">
-						<header>
-							<h2>Lorem ipsum dolor</h2>
-						</header>
-						<p>Fusce malesuada efficitur venenatis. Pellentesque tempor leo sed massa hendrerit hendrerit. In sed feugiat est, eu congue elit. Ut porta magna vel felis sodales vulputate. Donec faucibus dapibus lacus non ornare. Etiam eget neque id metus gravida tristique ac quis erat. Aenean quis aliquet sem. Ut ut elementum sem. Suspendisse eleifend ut est non dapibus. Nulla porta, neque quis pretium sagittis, tortor lacus elementum metus, in imperdiet ante lorem vitae ipsum. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Etiam eget neque id metus gravida tristique ac quis erat. Aenean quis aliquet sem. Ut ut elementum sem. Suspendisse eleifend ut est non dapibus. Nulla porta, neque quis pretium sagittis, tortor lacus elementum metus, in imperdiet ante lorem vitae ipsum. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas.</p>
-					</section>
-				-->
-
-				<!-- Footer -->
-					<footer id="footer">
-						<ul class="icons">
-							<li><a href="https://www.facebook.com/pg/metizresto/" class="icon fa-facebook"><span class="label">Facebook</span></a></li>
-							<li><a href="https://www.instagram.com/metizresto/" class="icon fa-instagram"><span class="label">Instagram</span></a></li>
-							<li><a href="metizresto@gmail.com" class="icon fa-envelope"><span class="label">Email</span></a></li>
-						</ul>
-						<p><a href="#" class="icon fa-mobile-phone"> Call (917) 700-4109</a></p>
-						<p class="copyright">&copy; Nice and Peachy. Design & Coded: <a href="https://github.com/dylanOshima/">Dylan Oshima</a>.
-							Images: <a href="http://www.nealoshima.com/">Neal Oshima</a>.
-						</p>
-					</footer>
-
+		<div class="main">
+			<div id="logo">
+				<img src="images/logo.png" alt="Cooking" />
 			</div>
+			<div class="row">
+				<div class="box"><img class="dish" src="images/dish1.JPG" alt="Cooking" /></div>
+				<div class="box"><img src="images/pic00.jpg" alt="Cooking" /></div>
+				<div class="box"><img class="dish" src="images/dish2.jpg" alt="Cooking" /></div>
+				<div class="box"><img src="images/pic01.jpg" alt="Cooking" /></div>
+				<div class="box"><img class="dish" src="images/dish3.jpg" alt="Cooking" /></div>
+				<div class="box"><img src="images/pic02.jpg" alt="Cooking" /></div>
+				<div class="box"><img class="dish" src="images/dish4.jpg" alt="Cooking" /></div>
+			</div>
+		</div>
+		
+		<div class="body">
+			<form class="reservation">
+				<div id="num-guests">
+					<div>Number of guests:</div>
+					<div>
+						<button>1</button>
+						<button>2</button>
+						<button>3</button>
+						<button>4</button>
+						<button>5</button>
+						<button>6</button>
+						<button>7</button>
+						<button>8</button>
+						<button>9</button>
+						<button>10</button>
+					</div>
+				</div>
+				<div id="date">Date: <input type="date" name="date" /> <br /></div>
+				<div id="time">Time: <input type="time" name="time" /> <br /></div>
+				<div id="submit"><button> Submit </button></div>
+			</form>
+		</div>
+
+		<!-- Footer -->
+		<footer id="footer">
+			<ul class="icons">
+				<li><a target=”_blank” rel="noopener noreferrer" href="https://www.facebook.com/pg/metizresto/" class="icon fa-facebook"><span class="label">Facebook</span></a></li>
+				<li><a target=”_blank” rel="noopener noreferrer" href="https://www.instagram.com/metizresto/" class="icon fa-instagram"><span class="label">Instagram</span></a></li>
+				<li><a href="metizresto@gmail.com" class="icon fa-envelope"><span class="label">Email</span></a></li>
+			</ul>
+			<p><a href="#" class="icon fa-mobile-phone"> Call (917) 700-4109</a></p>
+			<p class="copyright">&copy; Nice and Peachy Group Inc.</p>
+			<p class="copyright"> 
+				Design & Coded: <a target=”_blank” rel="noopener noreferrer" href="https://github.com/dylanOshima/">dylanOshima</a>,
+				Images: <a target=”_blank” rel="noopener noreferrer" href="http://www.nealoshima.com/">Neal Oshima</a>.
+			</p>
+		</footer>
 
 		<!-- Scripts -->
-			<script src="assets/js/jquery.min.js"></script>
-			<script src="assets/js/skel.min.js"></script>
-			<script src="assets/js/util.js"></script>
-			<script src="assets/js/main.js"></script>
-
+		<!-- <script src="assets/js/jquery.min.js"></script> -->
+		<!-- <script src="assets/js/skel.min.js"></script>
+		<script src="assets/js/util.js"></script>
+		<script src="assets/js/main.js"></script> -->
+		<script src="assets/js/main.js"></script>
 	</body>
 </html>
