@@ -8,48 +8,26 @@ var row = document.querySelector('.row'),
     day = document.getElementById('date'),
     time = document.getElementById('time');
 
-
-var handleScroll = (function() {
-  // Calculate number of boxes that can fit in a window
-  let windowWidth = document.body.scrollWidth,
-      boxWidth    = row.firstElementChild.scrollWidth,
-      numBoxes    = Math.ceil(windowWidth / boxWidth);
-
-  // Creates a copy of first element and appends it
-  let replicaFirst, replicaLast;
-  for(let i=0; i<numBoxes && i<row.children.length; i++) {
-    replicaLast = row.children[i].cloneNode(true);
-    row.appendChild(replicaLast);
-  }
-  replicaFirst = row.children[(row.children.length - numBoxes)];
-  // Loops
-  return function() {
-    if(replicaFirst.getBoundingClientRect().left < 0) {
-      // reset when scrolling right
-      row.scrollLeft = 0;
-    } else if(row.scrollLeft === 0) {
-      // reset when scrolling left
-      row.scrollLeft = replicaFirst.getBoundingClientRect().left;
-    }
-  }
-})();
-
 function submit(e) {
   e.preventDefault();
 
+  let body = document.querySelector('.body');
+
   // Create date instance from data
-  let message = document.getElementById("reserve-error") || document.createElement('div');
+  let message = document.getElementById("reserve-message") || document.createElement('div');
   message.id = "reserve-error";
 
   if(formIsValid(message)){
-
-
     message.innerHTML = "Reservation made! We will contact you to confirm.";
     message.style.color = "green";
+
+    // Hide form
+    let reservation = body.querySelector('.reservation');
+    reservation.className += ' hidden';
+
   }
 
   // Display message
-  let body = document.querySelector('.body');
   body.insertBefore(message, body.querySelector('.reservation'));
 };
 
@@ -114,8 +92,35 @@ function formIsValid(message) {
 
 window.onload = function() {
   // Adds infinite scrolling functionality
-  row.addEventListener('scroll', handleScroll);
-  
+  if(window.screen.width > 768) {
+    var handleScroll = (function() {
+      // Calculate number of boxes that can fit in a window
+      let windowWidth = document.body.scrollWidth,
+          boxWidth    = row.firstElementChild.scrollWidth,
+          numBoxes    = Math.ceil(windowWidth / boxWidth);
+    
+      // Creates a copy of first element and appends it
+      let replicaFirst, replicaLast;
+      for(let i=0; i<numBoxes && i<row.children.length; i++) {
+        replicaLast = row.children[i].cloneNode(true);
+        row.appendChild(replicaLast);
+      }
+      replicaFirst = row.children[(row.children.length - numBoxes)];
+      // Loops
+      return function() {
+        if(replicaFirst.getBoundingClientRect().left < 0) {
+          // reset when scrolling right
+          row.scrollLeft = 0;
+        } else if(row.scrollLeft === 0) {
+          // reset when scrolling left
+          row.scrollLeft = replicaFirst.getBoundingClientRect().left;
+        }
+      }
+    })();
+
+    row.addEventListener('scroll', handleScroll);
+  }
+
   // Handle form submit
   let form = document.querySelector('form');
   form.addEventListener('submit', submit);

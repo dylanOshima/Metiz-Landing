@@ -172,9 +172,12 @@ button,
 
   #logo, .box img {
     height: 50vw;
-    width: 50vw;
+    width: 100vw;
   }
 
+  .row {
+    display: none;
+  }
 }
 
 /* FORM */
@@ -185,9 +188,7 @@ button,
   width: 35vw;
 }
 .reservation{
-  /* display: grid;
-  grid: auto 20% auto / 50% 50%;
-  grid-gap: 1em; */
+  opacity: 1;
   vertical-align: top; /* here */
 }
   #num-guests {
@@ -315,4 +316,9 @@ li a:hover {
   .copyright {
     padding: 0 0.5em;
   }
+}
+
+.hidden {
+  opacity: 0;
+  transition: opacity 0.2s ease-in-out ;
 }
