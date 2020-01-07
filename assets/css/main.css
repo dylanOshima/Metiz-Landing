@@ -75,17 +75,6 @@ button,
     opacity: 0.25;
   }
 
-  @media screen and (max-width: 480px) {
-
-    input[type="submit"],
-    input[type="button"],
-    button,
-    .button {
-      padding: 0;
-    }
-
-  }
-
 input[type="submit"],
 input[type="button"],
 button,
@@ -179,6 +168,15 @@ button,
   width: 29vw;
 }
 
+@media screen and (max-width: 736px) {
+
+  #logo, .box img {
+    height: 50vw;
+    width: 50vw;
+  }
+
+}
+
 /* FORM */
 .body {
   margin: 1em auto;
@@ -230,6 +228,17 @@ button,
   text-align: center;
 }
 
+@media screen and (max-width: 768px) {
+    
+  .body {
+    margin: 0 auto;
+    width: 80vw;
+    text-align: center;
+    height: inherit;
+  }
+
+}
+
 /* FOOTER */
 
 /* Icon */
@@ -271,14 +280,6 @@ li a:hover {
   color: #EF6480 !important;
 }
 
-@media screen and (max-width: 736px) {
-
-  .icon.major:before {
-    font-size: 2rem;
-  }
-
-}
-
 #footer {
   text-align: center;
   margin-top: 4em;
@@ -307,8 +308,11 @@ li a:hover {
     margin-top: 2em;
   }
 
-    #footer:before {
-      margin-bottom: 2em;
-    }
+  #footer:before {
+    margin-bottom: 2em;
+  }
 
+  .copyright {
+    padding: 0 0.5em;
+  }
 }
