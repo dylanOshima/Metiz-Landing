@@ -150,13 +150,13 @@ button,
 
 #logo {
   position: absolute;
-  top: -10px;
+  top: -6px;
   bottom: 0;
   left: 0;
   right: 0;
   margin: auto;
-  width: 30vw;
-  height: 30.5vh;
+  height: 29vw;
+  width: 29vw;
   pointer-events: none;
   background-color: rgba(255,255,255,0.85);
 }
@@ -172,10 +172,11 @@ button,
 } */
 
 .box img {
-  border: 2px solid white;
+  border: 1px solid #808080;
+  margin-left: -1px;
   object-fit: cover;
-  height: 30vh;
-  width: 30vw;
+  height: 29vw;
+  width: 29vw;
 }
 
 /* FORM */
@@ -183,31 +184,52 @@ button,
   margin: 1em auto;
   padding: 4em 0em;
   height: 60vh;
-  width: 45vw;
+  width: 35vw;
 }
 .reservation{
-  display: grid;
-  grid: 20% 70% 10%/ 80% 20%;
+  /* display: grid;
+  grid: auto 20% auto / 50% 50%;
+  grid-gap: 1em; */
+  vertical-align: top; /* here */
 }
   #num-guests {
-    grid-column: 1 / -1;
-    grid-row: 1 / 1;
-    /* justify-self: center; */
-    /* align-self: center; */
-    overflow: scroll;
+    width: 1.5em;
   }
   #date {
-    grid-column: 1 / 1;
-    grid-row: 2 / 2;
+    width: 8em;
   }
-  #time {
+  #res-name {
+    width: 8em;
+  }
+  #number {
+    width: 8em;
+  }
+  #email {
+    width: 11em;
+  }
+  /* #time {
     grid-column: 2 / 2;
     grid-row: 2 / 2;
+    padding: 1em;
+    border: 1px solid black;
+    background-color: #cebaa6;
+    border-radius: 4px;
   }
   #submit {
-    grid-column: 2 / 2;
+    grid-column: 1 / -1;
     grid-row: 3 / 3;
-  }
+    text-align: center;
+  } */
+
+.reservation input {
+  outline: 0;
+  border-width: 0 0 1px;
+  border-color: black;
+  border-style: dotted;
+  font: inherit;
+  text-align: center;
+}
+
 /* FOOTER */
 
 /* Icon */

@@ -33,25 +33,25 @@
 		</div>
 		
 		<div class="body">
+			<h1 class="title">Make a reservation</h1>
 			<form class="reservation">
-				<div id="num-guests">
-					<div>Number of guests:</div>
-					<div>
-						<button>1</button>
-						<button>2</button>
-						<button>3</button>
-						<button>4</button>
-						<button>5</button>
-						<button>6</button>
-						<button>7</button>
-						<button>8</button>
-						<button>9</button>
-						<button>10</button>
-					</div>
-				</div>
-				<div id="date">Date: <input type="date" name="date" /> <br /></div>
-				<div id="time">Time: <input type="time" name="time" /> <br /></div>
-				<div id="submit"><button> Submit </button></div>
+				<p>
+					I would like to reserve for
+					<input placeholder="2" id="num-guests" type="number" name="pax" /> 
+					people, <br />
+					on <input id="date" type="date" name="date" />
+					at <input id="time" type="time" name="time" />.
+				</p><p>
+					Reservation under 
+					<input placeholder="name" id="res-name" type="text" name="contact-name" />.
+				</p><p>
+					To confirm my reservation, <br />
+					<span>my phone number is: 
+					<input id="number" type="text" name="contact-number" />,</span><br />
+					<span>or alternatively my email is: 
+					<input id="email" type="email" name="contact-email" />.</span>
+				</p>
+				<div id="submit" onsubmit="submit()"><button> Submit </button></div>
 			</form>
 		</div>
 
@@ -71,10 +71,6 @@
 		</footer>
 
 		<!-- Scripts -->
-		<!-- <script src="assets/js/jquery.min.js"></script> -->
-		<!-- <script src="assets/js/skel.min.js"></script>
-		<script src="assets/js/util.js"></script>
-		<script src="assets/js/main.js"></script> -->
 		<script src="assets/js/main.js"></script>
 	</body>
 </html>
